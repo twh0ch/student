@@ -17,7 +17,6 @@ private:
     int diplomaGrade;
 
 public:
-    // Геттеры и сеттеры
     std::string getFirstName() const;
     void setFirstName(const std::string& name);
     std::string getLastName() const;
