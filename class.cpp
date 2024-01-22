@@ -43,13 +43,6 @@ void Student::setDiplomaGrade(int grade) {
 Student::Student(const std::string& fName, const std::string& lName, const std::string& mName, int studentAge, int grade)
     : firstName(fName), lastName(lName), middleName(mName), age(studentAge), diplomaGrade(grade) {}
 
-Student::Student(const Student& other) {
-    firstName = other.firstName;
-    lastName = other.lastName;
-    middleName = other.middleName;
-    age = other.age;
-    diplomaGrade = other.diplomaGrade;
-}
 
 void Student::initializeVectorFromFile(const std::string& filename, std::vector<Student>& students) {
     std::ifstream file(filename);
@@ -115,7 +108,7 @@ void Student::sortByDiplomaGrade(std::vector<Student>& students) {
 }
 
 void Student::printInfo() const {
-    std::cout << "Фамилия: " << firstName << "\nИмя: " << lastName
+    std::cout << "Имя: " << firstName << "\nФамилия: " << lastName
               << "\nОтчество: " << middleName << "\nВозраст: " << age
               << "\nОценка за диплом: " << diplomaGrade << std::endl;
 }
