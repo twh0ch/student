@@ -28,12 +28,10 @@ public:
     int getDiplomaGrade() const;
     void setDiplomaGrade(int grade);
 
-    // Конструкторы
     Student() : age(0), diplomaGrade(0) {}
     Student(const std::string& fName, const std::string& lName, const std::string& mName, int studentAge, int grade);
     Student(const Student& other);
 
-    // Функция для инициализации вектора из файла и записи вектора в файл
     static void initializeVectorFromFile(const std::string& filename, std::vector<Student>& students);
     static void writeVectorToFile(const std::string& filename, const std::vector<Student>& students);
 
